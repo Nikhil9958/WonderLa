@@ -5,7 +5,7 @@
     "mongoose": "^8.7.0",
     "nodemon": "^3.1.7"
   },
-  "name": "wonderla",
+  "name": "wanderla",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {

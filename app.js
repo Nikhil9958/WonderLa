@@ -32,11 +32,33 @@ app.get('/listings',async (req,res)=>{ // to get all listings
     res.render('./listings/index.ejs',{allListings});
 })
 
-app.get('/listings/:id',async(req,res)=>{
+app.get('/listings/new',(req,res)=>{  //new route
+    res.render('listings/new.ejs');
+})
+
+app.get('/listings/:id',async(req,res)=>{  //show route
     const {id} = req.params;
     const listing = await Listing.findById(id);
     res.render("./listings/show.ejs",{listing})
 })
+
+app.post('/listings',async(req,res)=>{
+    const {title,description,image,price,location,country} = req.body;
+    let newListing = new Listing({
+        title:title,
+        description:description,
+        price:price,
+        location:location,
+        country:country,
+        image:image
+    });
+    console.log(newListing);
+    await newListing.save();
+    console.log("new listing saved");
+    res.redirect('/listings');
+})
+
+
 
 // app.get('/testListings',async(req,res)=>{ // for sample data
 //     let sampleListing = new Listing({
