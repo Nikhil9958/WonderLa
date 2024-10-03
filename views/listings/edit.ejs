@@ -8,18 +8,25 @@
 <body>
     <h3>Edit your Listing</h3>
     <form method="post" action="/listings/<%=listing.id%>?_method=PUT">
-        <input type="text"  name="listing[title]" value="<%=listing.title%>">
+        <label for="listing[title]"><b> Title: </b></label><br>
+        <input size="50" type="text"  name="listing[title]" value="<%=listing.title%>">
         <br><br>
-        <textarea name="listing[description]" ><%=listing.description%></textarea>
+        <label for="listing[description]"><b> Description: </b></label><br>
+        <textarea rows="5" cols="50" name="listing[description]" ><%=listing.description%></textarea>
         <br><br>
-        <input type="text"  name="listing[image]" value="<%=listing.image.url%>">
+        <label for="listing[image]"><b> Image: </b></label><br>
+        <input size="50" type="text"  name="listing[image]" value="<%=listing.image.url%>">
         <br><br>
-        <input type="number"  name="listing[price]" value="<%=listing.price%>">
+        <label for="listing[price]"><b> Price: </b></label><br>
+        <input type="number" name="listing[price]" value="<%=listing.price%>">
         <br><br>
-        <input type="text"  name="listing[country]" value="<%=listing.country%>">
+        <label for="listing[location]"><b> Location: </b></label><br>
+        <input size="50" type="text"  name="listing[location]" value="<%=listing.location%>">
         <br><br>
-        <input type="text"  name="listing[location]" value="<%=listing.location%>">
+        <label for="listing[country]"><b> Country: </b></label><br>
+        <input size="50" type="text"  name="listing[country]" value="<%=listing.country%>">
         <br><br>
+        
         <button type="submit">Edit</button>
     </form>
 </body>
