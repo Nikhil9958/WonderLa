@@ -1,27 +1,29 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WanderLa</title>
-</head>
+</head> -->
+<% layout('/layouts/boilerplate') %>
 <body>
     <h3>Create new Listing</h3>
     <form method="post" action="/listings">
-        <input type="text"  name="title" placeholder="enter title">
+        <input size="50" type="text"  name="title" placeholder="enter title">
         <br><br>
-        <textarea name="description" placeholder="enter description" id=""></textarea>
+        <textarea rows="5" cols="50" name="description" placeholder="enter description" id=""></textarea>
         <br><br>
-        <input type="text"  name="image" placeholder="enter image URL">
+        <input size="50" type="text"  name="image" placeholder="enter image URL">
         <br><br>
         <input type="number"  name="price" placeholder="enter price">
         <br><br>
-        <input type="text"  name="country" placeholder="enter country">
+        <input size="50" type="text"  name="location" placeholder="enter city/state">
         <br><br>
-        <input type="text"  name="location" placeholder="enter location">
+        <input size="50" type="text"  name="country" placeholder="enter country">
         <br><br>
+       
         <button type="submit">Add</button>
     </form>
     
 </body>
-</html>
+<!-- </html> -->
