@@ -19,7 +19,7 @@ body {
     background-color: white;
 }
 
-.add-btn{
+.add-btn, .edit-btn{
     border: none;
     background-color: #fe424d;
 }
