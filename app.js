@@ -52,13 +52,14 @@ app.get('/listings/:id',async(req,res)=>{  //show route
 
 app.post('/listings',async(req,res)=>{
     const {title,description,image,price,location,country} = req.body;
+    console.log(image);
     let newListing = new Listing({
         title:title,
         description:description,
         price:price,
         location:location,
         country:country,
-        image:{url:image.url}
+        image:{url:image}
     });
     console.log(newListing);
     await newListing.save();
