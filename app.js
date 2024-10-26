@@ -31,7 +31,9 @@ async function main(){
 }
 
 app.get('/',(req,res)=>{
-    res.send("Hi, I am root");
+    // res.send("Hi, I am root");
+    res.redirect('/listings');
+
 })
 
 app.get('/listings',async (req,res)=>{ // to get all listings
