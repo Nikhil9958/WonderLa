@@ -20,15 +20,18 @@ app.use(methodOverride('_method'))
 const ejsMate = require('ejs-mate');
 app.engine('ejs',ejsMate);
 
+
+
+async function main(){
+    await mongoose.connect(MONGO_URL);
+}
+
 main().then(()=>{
     console.log("Connected to DB");
 }).catch(err=>{
     console.log(err);
 })
 
-async function main(){
-    await mongoose.connect(MONGO_URL);
-}
 
 app.get('/',(req,res)=>{
     // res.send("Hi, I am root");
