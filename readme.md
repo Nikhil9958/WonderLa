@@ -1,6 +1,6 @@
 Steps - 
 1) First clone the repo
-2) install mongodb  (Use homebrew and xcode for mac)
+2) install mongodb  (Use homebrew and xcode for mac) - https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/#std-label-install-mdb-community-macos
 3) npm install package.json
 4) Initialise database using index.js file in init folder (node index.js )
 5) start using npx nodemon app.js
