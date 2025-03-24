@@ -4,8 +4,9 @@
     "ejs-mate": "^4.0.0",
     "express": "^4.21.0",
     "method-override": "^3.0.0",
-    "mongoose": "^8.7.0",
-    "nodemon": "^3.1.7"
+    "mongoose": "^8.12.2",
+    "nodemon": "^3.1.9",
+    "package": "^1.0.1"
   },
   "name": "wanderla",
   "version": "1.0.0",
